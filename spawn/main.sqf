@@ -34,8 +34,8 @@ _isPZombie = player isKindOf "PZombie_VB";
 
 //Add private classes and spawns this player has access to.
 spawn_config = PVCDZ_plr_Login2 select 4;
-class_public = class_public + (spawn_config select 0);
-spawn_public = spawn_public + (spawn_config select 1);
+class_public = (spawn_config select 0) + class_public;
+spawn_public = (spawn_config select 1) + spawn_public;
 
 waitUntil {uiSleep 0.1; !isNull findDisplay 46};
 #include "functions\scripts.sqf"
