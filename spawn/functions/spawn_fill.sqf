@@ -1,4 +1,4 @@
-private ["_block","_blockGroup","_blockPlot","_bodies","_body","_grid","_hlevel","_humanity","_index","_lb","_level","_name","_radius","_uid"];
+private ["_block","_blockGroup","_blockPlot","_bodies","_body","_grid","_hlevel","_humanity","_index","_inGroup","_lb","_level","_name","_radius","_uid"];
 disableSerialization;
 #include "scripts.sqf"
 
@@ -7,6 +7,7 @@ _blockGroup = false;
 _blockPlot = false;
 _lb = (findDisplay 88890) displayCtrl 8888;
 _humanity = player getVariable ["humanity",0];
+_inGroup = count units group player > 1;
 _uid = getPlayerUID player;
 spawn_plot = objNull;
 
@@ -34,7 +35,7 @@ if (spawn_bodyCheck > 0) then {
 				_block set [count _block,(_x select 0)];
 			};
 		} forEach spawn_public;
-		if (count units group player > 1 && spawn_nearGroup) then {
+		if (_inGroup && spawn_nearGroup) then {
 			_grid = getPosATL leader group player;
 			if (surfaceIsWater _grid) then {_grid = ATLToASL _grid;};
 			if (_body distance _grid < spawn_bodyCheck) then {_blockGroup = true;};
@@ -82,7 +83,7 @@ lbClear _lb;
 	};
 } forEach spawn_public;
 
-if (count units group player > 1 && spawn_nearGroup && !_blockGroup) then {
+if (_inGroup && spawn_nearGroup && !_blockGroup) then {
 	_index = _lb lbAdd (localize "STR_ESS_GROUP");
 	_lb lbSetColor [_index,[1,.7,.4,1]];
 	_lb lbSetPicture [_index,"\ca\ui\data\ui_task_done_ca.paa"];

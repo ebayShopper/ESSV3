@@ -18,7 +18,7 @@
 	soundEscape[] = {"\ca\ui\data\sound\onescape",.09,1};\
 	soundPush[] = {"\ca\ui\data\sound\new1",0,0};\
 	style = 2;\
-	type = 1;
+	type = 1
 
 #define ESS_LISTBOX autoScrollDelay = 5;\
 	autoScrollRewind = 0;\
@@ -42,7 +42,7 @@
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";\
 	soundSelect[] = {"",.1,1};\
 	style = 16;\
-	type = 5;
+	type = 5
 
 class ClassDialog
 {
@@ -83,8 +83,8 @@ class ClassDialog
 			y = .339 * safezoneH + safezoneY;
 			w = .138504 * safezoneW;
 			h = .25 * safezoneH;
-			onLBSelChanged = "[] spawn class_preview;";
-			ESS_LISTBOX
+			onLBSelChanged = "call class_preview;";
+			ESS_LISTBOX;
 		};
 		class ClassButton
 		{
@@ -95,7 +95,7 @@ class ClassDialog
 			w = .109 * safezoneW;
 			h = .044 * safezoneH;
 			action = "call class_pick; if (count class_choice > 0) then {closeDialog 0;};";
-			ESS_BUTTON
+			ESS_BUTTON;
 		};
 	};
 };
@@ -158,7 +158,7 @@ class HaloDialog
 			w = .0743267 * safezoneW;
 			h = .0877774 * safezoneH;
 			action = "halo_choice = 1; closeDialog 0;";
-			ESS_BUTTON
+			ESS_BUTTON;
 		};
 		class HaloButtonGround
 		{
@@ -169,7 +169,7 @@ class HaloDialog
 			w = .0743267 * safezoneW;
 			h = .0877774 * safezoneH;
 			action = "halo_choice = 0; closeDialog 0;";
-			ESS_BUTTON
+			ESS_BUTTON;
 		};
 	};
 };
@@ -213,7 +213,7 @@ class SpawnDialog
 			w = .1185 * safezoneW;
 			h = .33 * safezoneH;
 			onLBSelChanged = "[] spawn spawn_map;";
-			ESS_LISTBOX
+			ESS_LISTBOX;
 		};
 		class SpawnButton
 		{
@@ -224,7 +224,7 @@ class SpawnDialog
 			w = .092 * safezoneW;
 			h = .067 * safezoneH;
 			action = "call spawn_pick; if (count spawn_choice > 0) then {closeDialog 0;};";
-			ESS_BUTTON
+			ESS_BUTTON;
 		};
 		class SpawnMap
 		{

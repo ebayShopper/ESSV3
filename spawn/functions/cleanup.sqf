@@ -8,7 +8,6 @@ class_bot = nil;
 class_choice = nil;
 class_fillItems = nil;
 class_fillList = nil;
-class_force = nil;
 class_pick = nil;
 class_preview = nil;
 class_public = nil;

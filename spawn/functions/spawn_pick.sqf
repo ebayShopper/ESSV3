@@ -1,4 +1,4 @@
-private ["_block","_humanity","_level","_name","_spawn"];
+private ["_block","_hlevel","_humanity","_name","_spawn"];
 disableSerialization;
 #include "scripts.sqf"
 
@@ -20,7 +20,6 @@ if (count _spawn == 0) exitWith {
 };
 
 if (count _spawn > 2) then {
-	_level = _spawn select 2;
 	_hlevel = _spawn select 3;
 	_humanity = player getVariable ["humanity",0];
 	

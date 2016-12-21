@@ -7,11 +7,12 @@ dayz_maxGlobalAnimals = 0; //Stop client spawning animals until after selection 
 fnc_usec_damageHandlerOriginal = fnc_usec_damageHandler;
 fnc_usec_damageHandler = {}; //Stop damage until after selection is done
 dayz_paraSpawn = false; //Disable stock HALO spawn
+if (isNil "DZE_HaloJump") then {DZE_HaloJump = false;};
+if (isNil "DZE_HaloSpawnHeight") then {DZE_HaloSpawnHeight = 2000;};
 
 //Temporary until 1.0.6.1/1.8.8.1 release
 dayz_typedBags = ["bloodTester","bloodBagANEG","bloodBagAPOS","bloodBagBNEG","bloodBagBPOS","bloodBagABNEG","bloodBagABPOS","bloodBagONEG","bloodBagOPOS","wholeBloodBagANEG","wholeBloodBagAPOS","wholeBloodBagBNEG","wholeBloodBagBPOS","wholeBloodBagABNEG","wholeBloodBagABPOS","wholeBloodBagONEG","wholeBloodBagOPOS"];
 respawn_west_original = getMarkerPos "respawn_west";
-if (isNil "dze_halospawnheight") then {dze_halospawnheight = 2000;};
 
 if (spawn_selection) then {
 	dayz_spawnselection = 0; //Skip vanilla spawn selection

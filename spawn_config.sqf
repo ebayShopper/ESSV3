@@ -2,7 +2,7 @@
 	ESSV3 Server Side Config
 	
 	For detailed information about these variables see:
-	https://github.com/ebayShopper/ESSV3/DOCUMENTATION.MD
+	https://github.com/ebayShopper/ESSV3/blob/master/DOCUMENTATION.md
 */
 class_level1 = ["0","0","0"];
 class_level2 = ["0","0","0"];
@@ -19,7 +19,7 @@ class_private = [ // These are only visible to players in their respective class
 	["VIP Sniper","Sniper1_DZ","SurvivorW2_DZ",["20Rnd_762x51_DMR",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["DMR_DZ","M9_SD_DZ","Binocular_Vector"],"DZ_Backpack_EP1",[],[],3,0,0,"MeleeHatchet"]
 ];
 class_customLoadout = [
-	"76561198014219874", // ebay
+	"12345678900000000", // ebay
 	"0",
 	"0"
 ];
@@ -41,7 +41,7 @@ spawn_private = [ // These are only visible to players in their respective spawn
 	//["VIP Hideout",[12944,12767,0],2,0]
 ];
 spawn_base = [
-	"76561198014219874", // ebay
+	"12345678900000000", // ebay
 	"0",
 	"0"
 ];
@@ -58,7 +58,6 @@ spawn_bases = [
 	The function below returns all private classes and spawns the player has access to.
 	The player is sent this data when they respawn.
 */
-respawn_west_original = getMarkerPos "respawn_west"; //Temporary until 1.0.6.1/1.8.8.1 release
 spawn_config = {
 	private ["_classes","_classLevel","_freshSpawn","_index","_playerUID","_return","_spawnLevel","_spawns"];
 	
@@ -103,10 +102,13 @@ spawn_config = {
 	_return
 };
 
+//Allow extra skins in vanilla
 if !(isClass (configFile >> "CfgWeapons" >> "Chainsaw")) then {
-	//Allow extra skins in vanilla
 	AllPlayers = AllPlayers + [
 		"Citizen3","CZ_Soldier_DES_EP1","Rocket_DZ","TK_INS_Soldier_EP1",
 		"US_Soldier_EP1","Villager1","Worker1"
 	];
 };
+
+//Temporary until 1.0.6.1/1.8.8.1 release
+respawn_west_original = getMarkerPos "respawn_west";

@@ -2,7 +2,7 @@
 	ESSV3 Client Side Config
 	
 	For detailed information about these variables see:
-	https://github.com/ebayShopper/ESSV3/DOCUMENTATION.MD
+	https://github.com/ebayShopper/ESSV3/blob/master/DOCUMENTATION.md
 */
 
 class_selection = true; //Enable class selection dialog
@@ -193,7 +193,7 @@ spawn_public = switch (toLower worldName) do {
 	};
 	case "smd_sahrani_a2": {
 		[
-			[localize "str_disp_srvsetup_random",[[11369,5348,0],[9343,5953,0],[7645,6408,0],[12369,7108,0],[9131,8319,0],[10697,9490,0],[13197,8848,0],[14307,12496,0],[9763,14424,0],[10690,16186,0],[17314,14304,0],[18952,13913,0],[4541,15297,0],[9691,11021,0],[8311,9058,0],[2106,2679,0],[7767,15806,0],[6222,17336,0],[14230,1691,0]],0,0,1], // Random will never be blocked, so always keep it if using body check.
+			[localize "str_disp_srvsetup_random",[[11369,5348,0],[9343,5953,0],[7645,6408,0],[12369,7108,0],[9131,8319,0],[10697,9490,0],[13197,8848,0],[14307,12496,0],[9763,14424,0],[10690,16186,0],[17314,14304,0],[18952,13913,0],[4541,15297,0],[9691,11021,0],[8311,9058,0],[2106,2679,0],[7767,15806,0],[6222,17336,0],[14230,1691,0]],0,0,1],
 			["Parato",[11369,5348,0],0,0],
 			["Cayo",[9343,5953,0],0,0],
 			["Arcadia",[7645,6408,0],0,0],

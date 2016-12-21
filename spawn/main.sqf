@@ -4,7 +4,7 @@ private ["_bag","_bmags","_bmags2","_bmags3","_bpistol","_btools","_bweps","_coi
 
 waitUntil {uiSleep 0.4; (!isNil "PVCDZ_plr_Login2" && {count PVCDZ_plr_Login2 > 0})};
 
-// Worldspace from stock spawn selection or server_playerSetup
+// Worldspace from vanilla spawn selection or server_playerSetup
 _grid = (PVCDZ_plr_Login2 select 2) select 1;
 
 spawn_cameraPos = [(random 99999),(random 99999),99999];
@@ -52,7 +52,7 @@ if (class_selection && !_isPZombie) then {
 	
 	createDialog "ClassDialog";
 	call class_fillList;
-	[] spawn class_preview;	
+	call class_preview;
 	waitUntil {uiSleep 0.1; !dialog};
 	
 	_bag = "";
@@ -203,7 +203,7 @@ if ((halo_selection or halo_force) && !_isPZombie) then {
 		waitUntil {uiSleep 0.1; !dialog};
 	};
 	
-	if (halo_choice == 1) then {		
+	if (halo_choice == 1) then {
 		if (halo_type == "") then {
 			player setPosATL [_grid select 0,_grid select 1,DZE_HaloSpawnHeight];
 			[player,DZE_HaloSpawnHeight] spawn BIS_fnc_halo;

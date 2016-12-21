@@ -1,8 +1,7 @@
-private ["_ctrl","_grid","_name","_spawn","_speed","_zoom"];
+private ["_ctrl","_grid","_name","_spawn","_zoom"];
 disableSerialization;
 #include "scripts.sqf"
 
-_speed = 2;
 _zoom = 0.35;
 _spawn = ["","","","",""];
 _name = lbText [8888,(lbCurSel 8888)];
@@ -33,6 +32,6 @@ if (spawn_mapPos distance _grid > 0) then {
 
 	// Zoom in to location
 	ctrlMapAnimClear _ctrl;
-	_ctrl ctrlMapAnimAdd [_speed,_zoom,_grid];
+	_ctrl ctrlMapAnimAdd [2,_zoom,_grid];
 	ctrlMapAnimCommit _ctrl;
 };
