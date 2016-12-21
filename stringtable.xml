@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="DayZMission">
+	<Package name="ESS">
+		<Key ID="STR_ESS_GROUP">
+			<English>By my group</English>
+		</Key>
+		<Key ID="STR_ESS_PLOT">
+			<English>By my plot</English>
+		</Key>
+		<Key ID="STR_ESS_BLOCKED">
+			<English>Note: some spawns were blocked due to a body of yours within %1m</English>
+		</Key>
+		<Key ID="STR_ESS_HUMANITY_TOO_HIGH">
+			<English>Your humanity must be less than %1 for this.</English>
+		</Key>
+		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
+			<English>Your humanity must be greater than %1 for this.</English>
+		</Key>
+		<Key ID="STR_ESS_NOTHING_SELECTED">
+			<English>Nothing selected!</English>
+		</Key>
+		<Key ID="STR_ESS_CLASS_SELECT">
+			<English>Class Selection</English>
+		</Key>
+		<Key ID="STR_ESS_HALO_SELECT">
+			<English>Spawn Type Selection</English>
+		</Key>
+		<Key ID="STR_ESS_SPAWN_SELECT">
+			<English>Spawn Selection</English>
+		</Key>
+		<Key ID="STR_ESS_GROUND">
+			<English>Ground</English>
+		</Key>
+	</Package>
+</Project>
