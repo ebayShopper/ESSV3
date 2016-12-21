@@ -1,8 +1,8 @@
 # Class Configuration
-* You can add or delete any class in the class_public and class_private lists. Don't forget to leave off the last comma for the last element in the array. You can even remove all gear to make the class dialog a skin selector only.
+* You can add or delete any class in the class_public and class_private lists. Don't forget to leave off the last comma for the last element in the array.
 * Class_customLoadout - List of UIDs with custom loadouts.
 * Class_customLoadouts - List of custom loadouts. These must match the order of the first list. The first UID in _customLoadout corresponds with the first loadout in _customLoadouts and so on. These will only show in the class dialog for the player who owns them. If multiple UIDs share the same loadout then add the same loadout multiple times to maintain order, or consider making it a VIP class in class_private instead. Each loadout must have a unique name just like regular classes. Do not include humanity or VIP level in these.
-* Any of the class_customLoadouts, class_public and class_private can be made into random classes. They just need to be in the random format and it will be automatically detected. You can have multiple random classes, i.e. Random LMG, Random Rifle, Random Sniper, Random  Bandit, Random Hero, etc. You can make every class a random class if you want to.
+* Any of the class_customLoadouts, class_public and class_private can be made into random classes. They just need to be in the random format and it will be automatically detected. You can have multiple random classes, i.e. Random LMG, Random Rifle, Random Sniper, Random  Bandit, Random Hero, etc. You can make every class a random class if you want.
 * Instead of repeating long strings of the same items multiple times you can use constants in this format. Then replace all occurrences of "Item1","Item2","Item3","Item4" with SHORT_HAND_NAME as I did with the VIP_ITEMS example.
 
 	```sqf
