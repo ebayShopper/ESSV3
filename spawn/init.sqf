@@ -11,6 +11,7 @@ dayz_paraSpawn = false; //Disable stock HALO spawn
 //Temporary until 1.0.6.1/1.8.8.1 release
 dayz_typedBags = ["bloodTester","bloodBagANEG","bloodBagAPOS","bloodBagBNEG","bloodBagBPOS","bloodBagABNEG","bloodBagABPOS","bloodBagONEG","bloodBagOPOS","wholeBloodBagANEG","wholeBloodBagAPOS","wholeBloodBagBNEG","wholeBloodBagBPOS","wholeBloodBagABNEG","wholeBloodBagABPOS","wholeBloodBagONEG","wholeBloodBagOPOS"];
 respawn_west_original = getMarkerPos "respawn_west";
+if (isNil "dze_halospawnheight") then {dze_halospawnheight = 2000;};
 
 if (spawn_selection) then {
 	dayz_spawnselection = 0; //Skip vanilla spawn selection
