@@ -83,6 +83,7 @@ spawn_config = {
 	
 	{
 		_classLevel = _x select 8;
+		if (typeName _classLevel == "ARRAY") then {_classLevel = _x select 19;}; //Random
 		if (_playerUID in (call compile format["class_level%1",_classLevel])) then {
 			_classes = _return select 0;
 			_classes set [count _classes,_x];
