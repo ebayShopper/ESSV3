@@ -19,6 +19,9 @@ spawn_camera setDir 180;
 BIS_fnc_infoTextOriginal = BIS_fnc_infoText;
 BIS_fnc_infoText = {};
 
+//Temporary until 1.0.6.1/1.8.8.1 release
+if (toLower worldName != "chernarus") then {sched_townGenerator_ready = {true};};
+
 waitUntil {uiSleep 0.4; !isNil "Dayz_loginCompleted"};
 
 //Exit if not a fresh spawn
