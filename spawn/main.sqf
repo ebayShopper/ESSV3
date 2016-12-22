@@ -30,8 +30,7 @@ if !(PVCDZ_plr_Login2 select 3) exitWith {
 	#include "functions\cleanup.sqf"
 };
 
-// Stop music and slowCheck loops
-terminate dayz_musicH;
+// Stop slowCheck loop
 terminate dayz_slowCheck;
 _isPZombie = player isKindOf "PZombie_VB";
 
@@ -41,6 +40,8 @@ class_public = (spawn_config select 0) + class_public;
 spawn_public = (spawn_config select 1) + spawn_public;
 
 waitUntil {uiSleep 0.1; !isNull findDisplay 46};
+0 fadeSound 0;
+0 fadeMusic 0;
 #include "functions\scripts.sqf"
 
 if (class_selection && !_isPZombie) then {
@@ -251,8 +252,9 @@ if ((halo_selection or halo_force) && !_isPZombie) then {
 
 #include "functions\finish.sqf"
 
-// Start music and slowCheck loops
-dayz_musicH = [] spawn player_music;
+// Start slowCheck loop and unmute sound
 dayz_slowCheck = [] spawn player_spawn_2;
+3 fadeSound 1;
+3 fadeMusic 1;
 
 #include "functions\cleanup.sqf"
