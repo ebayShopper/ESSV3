@@ -30,8 +30,6 @@ if !(PVCDZ_plr_Login2 select 3) exitWith {
 	#include "functions\cleanup.sqf"
 };
 
-// Stop slowCheck loop
-terminate dayz_slowCheck;
 _isPZombie = player isKindOf "PZombie_VB";
 
 //Add private classes and spawns this player has access to.
@@ -251,10 +249,6 @@ if ((halo_selection or halo_force) && !_isPZombie) then {
 };
 
 #include "functions\finish.sqf"
-
-// Start slowCheck loop and unmute sound
-dayz_slowCheck = [] spawn player_spawn_2;
 3 fadeSound 1;
 3 fadeMusic 1;
-
 #include "functions\cleanup.sqf"

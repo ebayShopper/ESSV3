@@ -1,11 +1,15 @@
 #include "config.sqf"
 
+// Stop rules feed, animal spawning, damage and slow loop until after selection is done
 dayz_enableRulesOriginal = dayz_enableRules;
-dayz_enableRules = false; //Stop rules feed showing until after selection is done
+dayz_enableRules = false;
 dayz_maxGlobalAnimalsOriginal = dayz_maxGlobalAnimals;
-dayz_maxGlobalAnimals = 0; //Stop client spawning animals until after selection is done
+dayz_maxGlobalAnimals = 0;
 fnc_usec_damageHandlerOriginal = fnc_usec_damageHandler;
-fnc_usec_damageHandler = {}; //Stop damage until after selection is done
+fnc_usec_damageHandler = {};
+player_spawn_2_original = player_spawn_2;
+player_spawn_2 = {};
+
 dayz_paraSpawn = false; //Disable stock HALO spawn
 if (isNil "DZE_HaloJump") then {DZE_HaloJump = false;};
 if (isNil "DZE_HaloSpawnHeight") then {DZE_HaloSpawnHeight = 2000;};

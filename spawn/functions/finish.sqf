@@ -15,4 +15,7 @@ camDestroy spawn_camera;
 dayz_enableRules = dayz_enableRulesOriginal;
 dayz_maxGlobalAnimals = dayz_maxGlobalAnimalsOriginal;
 fnc_usec_damageHandler = fnc_usec_damageHandlerOriginal;
+player_spawn_2 = player_spawn_2_original;
+
+dayz_slowCheck = [] spawn player_spawn_2;
 if (dayz_enableRules && (profileNamespace getVariable ["streamerMode",0] == 0)) then { dayz_rulesHandle = execVM "rules.sqf"; };
