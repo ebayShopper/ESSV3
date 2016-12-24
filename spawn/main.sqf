@@ -252,3 +252,4 @@ if ((halo_selection or halo_force) && !_isPZombie) then {
 3 fadeSound 1;
 3 fadeMusic 1;
 #include "functions\cleanup.sqf"
+call player_forceSave; //Save in case server shuts down or player is kicked before opening gear or abort menu
