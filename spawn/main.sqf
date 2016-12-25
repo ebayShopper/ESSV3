@@ -113,10 +113,15 @@ if (class_selection && !_isPZombie) then {
 
 		if (_model != _myModel) then {
 			gear_done = false;
+			if (!isNil "player_countMagazinesWBackpack") then { //Skip ammo count. Player has no gear yet.
+				player_countMagazinesWBackpackOriginal = player_countMagazinesWBackpack;
+				player_countMagazinesWBackpack = {[[],[]]};
+			};
 			_handle = [dayz_playerUID,dayz_characterID,_model] spawn player_humanityMorph;
 			uiSleep 0.2;
 			waitUntil {scriptDone _handle};
 			gear_done = true;
+			player_countMagazinesWBackpack = player_countMagazinesWBackpackOriginal;
 			player call class_wipeGear;
 		};
 	};

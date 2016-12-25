@@ -3,6 +3,7 @@
 dayz_enableRulesOriginal = nil;
 dayz_maxGlobalAnimalsOriginal = nil;
 fnc_usec_damageHandlerOriginal = nil;
+player_countMagazinesWBackpackOriginal = nil;
 player_spawn_2_original = nil;
 
 class_bot = nil;
