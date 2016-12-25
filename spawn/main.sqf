@@ -4,6 +4,9 @@ private ["_bag","_bmags","_bmags2","_bmags3","_bpistol","_btools","_bweps","_coi
 
 waitUntil {uiSleep 0.4; (!isNil "PVCDZ_plr_Login2" && {count PVCDZ_plr_Login2 > 0})};
 
+//Stop infoText showing until after selection is done
+BIS_fnc_infoText = {};
+
 // Worldspace from vanilla spawn selection or server_playerSetup
 _grid = (PVCDZ_plr_Login2 select 2) select 1;
 
@@ -14,10 +17,6 @@ spawn_camera camSetFOV 0.7;
 spawn_camera camCommit 0;
 waitUntil {camCommitted spawn_camera};
 spawn_camera setDir 180;
-
-//Stop infoText showing until after selection is done
-BIS_fnc_infoTextOriginal = BIS_fnc_infoText;
-BIS_fnc_infoText = {};
 
 //Temporary until 1.0.6.1/1.8.8.1 release
 if (toLower worldName != "chernarus") then {sched_townGenerator_ready = {true};};
