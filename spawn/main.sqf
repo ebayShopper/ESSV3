@@ -198,6 +198,7 @@ if (spawn_selection) then {
 };
 
 preloadCamera _grid;
+player switchMove "";
 
 if ((halo_selection or halo_force) && !_isPZombie) then {
 	halo_choice = -1;
