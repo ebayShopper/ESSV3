@@ -26,6 +26,7 @@ if (spawn_selection) then {
 };
 
 if (class_selection) then {
+	class_epoch = isClass (configFile >> "CfgWeapons" >> "Chainsaw");
 	class_fillItems = compile preprocessFileLineNumbers "spawn\functions\class_fillItems.sqf";
 	class_fillList = compile preprocessFileLineNumbers "spawn\functions\class_fillList.sqf";
 	class_pick = compile preprocessFileLineNumbers "spawn\functions\class_pick.sqf";

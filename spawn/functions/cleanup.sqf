@@ -8,6 +8,7 @@ player_spawn_2_original = nil;
 
 class_bot = nil;
 class_choice = nil;
+class_epoch = nil;
 class_fillItems = nil;
 class_fillList = nil;
 class_pick = nil;
