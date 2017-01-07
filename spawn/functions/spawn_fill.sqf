@@ -30,8 +30,8 @@ if (spawn_bodyCheck > 0) then {
 	{
 		_body = _x;
 		{
-			//Never block random
-			if (count _x < 5 && {_body distance (_x select 1) < spawn_bodyCheck}) then {
+			//Never block random or custom base
+			if (count _x == 4 && {_body distance (_x select 1) < spawn_bodyCheck}) then {
 				_block set [count _block,(_x select 0)];
 			};
 		} forEach spawn_public;
