@@ -19,7 +19,7 @@ waitUntil {camCommitted spawn_camera};
 spawn_camera setDir 180;
 
 //Temporary until 1.0.6.1/1.8.8.1 release
-if (toLower worldName != "chernarus") then {sched_townGenerator_ready = {true};};
+sched_townGenerator_ready = {true};
 
 waitUntil {uiSleep 0.4; !isNil "Dayz_loginCompleted"};
 
