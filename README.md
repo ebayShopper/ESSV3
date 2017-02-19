@@ -19,7 +19,7 @@ Improvements over V2:
 
 **[>> Download <<](https://github.com/ebayShopper/ESSV3/archive/master.zip)**
 
-1. In mission\init.sqf find <code>if (dayz_enableRules</code> Add directly above:
+1. In mission\init.sqf find <code>execFSM "\z\addons\dayz_code\system\player_monitor.fsm";</code> Add directly above:
 
 	```sqf
 	call compile preprocessFileLineNumbers "spawn\init.sqf";
