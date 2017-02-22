@@ -177,6 +177,9 @@ class HaloDialog
 class SpawnDialog
 {
 	idd = 88890;
+	onLoad = "uiNamespace setVariable ['BIS_RscMiniMap',_this select 0];"; //Tell groupMarkers to draw while dialog is open
+	onUnload = "uiNamespace setVariable ['BIS_RscMiniMap',nil];";
+	
 	class controlsBackground 
 	{
 		class SpawnBackground: RscText
