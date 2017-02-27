@@ -12,12 +12,12 @@ player_spawn_2_original = player_spawn_2;
 player_spawn_2 = {};
 
 dayz_paraSpawn = false; //Disable stock HALO spawn
+if (isNil "DZE_HaloJump") then {DZE_HaloJump = false;};
+if (isNil "DZE_HaloSpawnHeight") then {DZE_HaloSpawnHeight = 2000;};
 
-if (!class_epoch) then { //Undefined variables in vanilla
-	dayz_typedBags = ["bloodTester","bloodBagANEG","bloodBagAPOS","bloodBagBNEG","bloodBagBPOS","bloodBagABNEG","bloodBagABPOS","bloodBagONEG","bloodBagOPOS","wholeBloodBagANEG","wholeBloodBagAPOS","wholeBloodBagBNEG","wholeBloodBagBPOS","wholeBloodBagABNEG","wholeBloodBagABPOS","wholeBloodBagONEG","wholeBloodBagOPOS"];
-	DZE_HaloJump = false;
-	DZE_HaloSpawnHeight = 2000;
-};
+//Temporary until 1.0.6.1/1.8.8.1 release
+dayz_typedBags = ["bloodTester","bloodBagANEG","bloodBagAPOS","bloodBagBNEG","bloodBagBPOS","bloodBagABNEG","bloodBagABPOS","bloodBagONEG","bloodBagOPOS","wholeBloodBagANEG","wholeBloodBagAPOS","wholeBloodBagBNEG","wholeBloodBagBPOS","wholeBloodBagABNEG","wholeBloodBagABPOS","wholeBloodBagONEG","wholeBloodBagOPOS"];
+respawn_west_original = getMarkerPos "respawn_west";
 
 if (spawn_selection) then {
 	dayz_spawnselection = 0; //Skip vanilla spawn selection

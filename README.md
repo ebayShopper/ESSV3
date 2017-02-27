@@ -5,7 +5,7 @@ Provides extra spawn options for Epoch 1.0.6 and DayZ 1.8.8:
 * Optional spawn near plot pole or group
 * Optional spawn in back seat of a plane for HALO
 * Loadouts can be preset or random
-* Compatible with vanilla anti-teleport
+* Compatible with vanilla anticheat
 * Config formats are backwards compatible with V2 configs
 
 Improvements over V2:
