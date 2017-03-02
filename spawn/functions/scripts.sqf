@@ -1,6 +1,8 @@
 ;'
 } count allDead;
-if (!_found) then {deleteMarkerLocal "MyBody";};
+
+
+if (dayz_oldBodyCount > _bodyCount) then {
 
 _region = createDialog "RscDisplaySpawnSelecter";
 
