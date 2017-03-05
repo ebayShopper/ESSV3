@@ -19,5 +19,9 @@ _agent = createAgent [_type, _position, [], _radius, "CAN_COLLIDE"];
 
 _unit setPosAsl [(_position select 0), (_position select 1), (LHA_height+1)];
 
-_this setVehicleInit "this setVectorUp [0,0,1];";
+if(_status) then {
+_vehicle setVehicleLock "LOCKED";
+} else {
+_vehicle setVehicleLock "UNLOCKED";
+};
 ';
