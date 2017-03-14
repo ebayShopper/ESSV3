@@ -66,7 +66,7 @@ lbClear _lb;
 		
 		_index = _lb lbAdd _name;
 		
-		if ((_hlevel < 0 && _humanity >= _hlevel) or (_hlevel > 0 && _humanity <= _hlevel)) then {
+		if ((_hlevel < 0 && _humanity >= _hlevel) or (_hlevel > 0 && _humanity <= _hlevel) or (_level > 0 && !(_level in spawn_levels))) then {
 			_lb lbSetPicture [_index,"\ca\ui\data\ui_task_failed_ca.paa"];
 		} else {
 			_lb lbSetPicture [_index,"\ca\ui\data\ui_task_done_ca.paa"];

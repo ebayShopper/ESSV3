@@ -34,6 +34,10 @@ spawn_config = PVCDZ_plr_Login2 select 4;
 class_public = (spawn_config select 0) + class_public;
 spawn_public = (spawn_config select 1) + spawn_public;
 
+//VIP levels this player has access to.
+class_levels = spawn_config select 2;
+spawn_levels = spawn_config select 3;
+
 waitUntil {uiSleep 0.1; !isNull findDisplay 46};
 0 fadeSound 0;
 0 fadeMusic 0;

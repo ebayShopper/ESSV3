@@ -16,6 +16,12 @@
 		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
 			<English>Your humanity must be greater than %1 for this.</English>
 		</Key>
+		<Key ID="STR_ESS_CVIP_TOO_LOW">
+			<English>You must have VIP class level %1 for this.</English>
+		</Key>
+		<Key ID="STR_ESS_SVIP_TOO_LOW">
+			<English>You must have VIP spawn level %1 for this.</English>
+		</Key>
 		<Key ID="STR_ESS_NOTHING_SELECTED">
 			<English>Nothing selected!</English>
 		</Key>

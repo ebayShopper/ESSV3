@@ -21,7 +21,7 @@ lbClear 8888;
 		};
 	};
 	
-	_lock = (_hlevel < 0 && _humanity >= _hlevel) or (_hlevel > 0 && _humanity <= _hlevel);
+	_lock = (_hlevel < 0 && _humanity >= _hlevel) or (_hlevel > 0 && _humanity <= _hlevel) or (_level > 0 && !(_level in class_levels));
 	_index = lbAdd [8888,(_x select 0)];
 	
 	if (_lock) then {

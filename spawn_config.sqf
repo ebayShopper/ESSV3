@@ -55,17 +55,17 @@ spawn_bases = [
 
 
 /*
-	The function below returns all private classes and spawns the player has access to.
+	The function below returns all private classes, private spawns, class levels and spawn levels the player has access to.
 	The player is sent this data when they respawn.
 */
 spawn_config = {
-	private ["_classes","_classLevel","_freshSpawn","_index","_playerUID","_return","_spawnLevel","_spawns"];
+	private ["_classes","_classLevel","_classLevels","_freshSpawn","_index","_playerUID","_return","_spawnLevel","_spawnLevels","_spawns"];
 	
 	_freshSpawn = _this select 0;
 	_playerUID = _this select 1;
 	
 	if (!_freshSpawn) exitWith {false};
-	_return = [[],[]];
+	_return = [[],[],[],[]];
 	
 	_index = class_customLoadout find _playerUID;
 	if (_index != -1) then {
@@ -85,6 +85,11 @@ spawn_config = {
 		_classLevel = _x select 8;
 		if (typeName _classLevel == "ARRAY") then {_classLevel = _x select 19;}; //Random
 		if (_classLevel == 0 or {_playerUID in (call compile format["class_level%1",_classLevel])}) then {
+			_classLevels = _return select 2;
+			if (_classLevel > 0 && !(_classLevel in _classLevels)) then {
+				_classLevels set [count _classLevels,_classLevel];
+				_return set [2,_classLevels];
+			};
 			_classes = _return select 0;
 			_classes set [count _classes,_x];
 			_return set [0,_classes];
@@ -94,6 +99,11 @@ spawn_config = {
 	{
 		_spawnLevel = _x select 2;
 		if (_spawnLevel == 0 or {_playerUID in (call compile format["spawn_level%1",_spawnLevel])}) then {
+			_spawnLevels = _return select 3;
+			if (_spawnLevel > 0 && !(_spawnLevel in _spawnLevels)) then {
+				_spawnLevels set [count _spawnLevels,_spawnLevel];
+				_return set [3,_spawnLevels];
+			};
 			_spawns = _return select 1;
 			_spawns set [count _spawns,_x];
 			_return set [1,_spawns];
