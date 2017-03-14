@@ -27,7 +27,7 @@ if (count _spawn > 2) then {
 	_block = switch true do {
 		case (_hlevel < 0 && _humanity >= _hlevel): {systemChat format[localize "STR_ESS_HUMANITY_TOO_HIGH",_hlevel]; true};
 		case (_hlevel > 0 && _humanity <= _hlevel): {systemChat format[localize "STR_ESS_HUMANITY_TOO_LOW",_hlevel]; true};
-		case (_level > 0 && !(_level in spawn_levels)): {systemChat format[localize "STR_ESS_SVIP_TOO_LOW",_level]; true};
+		case (_level > 0 && !(_level in spawn_levels)): {systemChat format[localize "STR_ESS_NEED_SVIP",_level]; true};
 		default {false};
 	};
 };

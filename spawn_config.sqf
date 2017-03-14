@@ -7,6 +7,7 @@
 class_level1 = ["0","0","0"];
 class_level2 = ["0","0","0"];
 class_level3 = ["0","0","0"];
+class_levelCount = 3; //If you add more class levels then increase this number.
 // To give higher level VIPs access to lower level VIP classes uncomment the two lines below:
 // class_level1 = class_level1 + class_level2 + class_level3;
 // class_level2 = class_level2 + class_level3;
@@ -32,6 +33,7 @@ class_customLoadouts = [ // These are only visible to their owner
 spawn_level1 = ["0","0","0"];
 spawn_level2 = ["0","0","0"];
 spawn_level3 = ["0","0","0"];
+spawn_levelCount = 3; //If you add more spawn levels then increase this number.
 // To give higher level VIPs access to lower level VIP spawns uncomment the two lines below:
 // spawn_level1 = spawn_level1 + spawn_level2 + spawn_level3;
 // spawn_level2 = spawn_level2 + spawn_level3;
@@ -81,15 +83,25 @@ spawn_config = {
 		_return set [1,_spawns];
 	};
 	
+	_classLevels = [];
+	_spawnLevels = [];
+	for "_i" from 1 to class_levelCount do {
+		if (_playerUID in (call compile format["class_level%1",_i])) then {
+			_classLevels set [count _classLevels,_i];
+		};
+	};
+	for "_i" from 1 to spawn_levelCount do {
+		if (_playerUID in (call compile format["spawn_level%1",_i])) then {
+			_spawnLevels set [count _spawnLevels,_i];
+		};
+	};
+	_return set [2,_classLevels];
+	_return set [3,_spawnLevels];
+	
 	{
 		_classLevel = _x select 8;
 		if (typeName _classLevel == "ARRAY") then {_classLevel = _x select 19;}; //Random
 		if (_classLevel == 0 or {_playerUID in (call compile format["class_level%1",_classLevel])}) then {
-			_classLevels = _return select 2;
-			if (_classLevel > 0 && !(_classLevel in _classLevels)) then {
-				_classLevels set [count _classLevels,_classLevel];
-				_return set [2,_classLevels];
-			};
 			_classes = _return select 0;
 			_classes set [count _classes,_x];
 			_return set [0,_classes];
@@ -99,11 +111,6 @@ spawn_config = {
 	{
 		_spawnLevel = _x select 2;
 		if (_spawnLevel == 0 or {_playerUID in (call compile format["spawn_level%1",_spawnLevel])}) then {
-			_spawnLevels = _return select 3;
-			if (_spawnLevel > 0 && !(_spawnLevel in _spawnLevels)) then {
-				_spawnLevels set [count _spawnLevels,_spawnLevel];
-				_return set [3,_spawnLevels];
-			};
 			_spawns = _return select 1;
 			_spawns set [count _spawns,_x];
 			_return set [1,_spawns];
