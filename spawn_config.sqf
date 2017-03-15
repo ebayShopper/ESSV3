@@ -127,3 +127,6 @@ if !(isClass (configFile >> "CfgWeapons" >> "Chainsaw")) then {
 		"US_Soldier_EP1","Villager1","Worker1"
 	];
 };
+
+//Not defined in 1.8.8
+respawn_west_original = getMarkerPos "respawn_west";

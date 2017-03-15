@@ -15,6 +15,7 @@ dayz_paraSpawn = false; //Disable stock HALO spawn
 
 if (!class_epoch) then { //Undefined variables in vanilla
 	dayz_typedBags = ["bloodTester","bloodBagANEG","bloodBagAPOS","bloodBagBNEG","bloodBagBPOS","bloodBagABNEG","bloodBagABPOS","bloodBagONEG","bloodBagOPOS","wholeBloodBagANEG","wholeBloodBagAPOS","wholeBloodBagBNEG","wholeBloodBagBPOS","wholeBloodBagABNEG","wholeBloodBagABPOS","wholeBloodBagONEG","wholeBloodBagOPOS"];
+	respawn_west_original = getMarkerPos "respawn_west";
 	DZE_HaloJump = false;
 	DZE_HaloSpawnHeight = 2000;
 };
