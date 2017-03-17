@@ -1,4 +1,4 @@
-private ["_block","_blockGroup","_blockPlot","_bodies","_body","_grid","_hlevel","_humanity","_index","_inGroup","_lb","_level","_name","_radius","_uid"];
+private ["_block","_blockGroup","_blockPlot","_bodies","_body","_grid","_hlevel","_humanity","_index","_inGroup","_lb","_level","_name","_uid"];
 disableSerialization;
 #include "scripts.sqf"
 
@@ -12,12 +12,11 @@ _uid = getPlayerUID player;
 spawn_plot = objNull;
 
 if (spawn_nearPlot) then {
-	_radius = (getMarkerSize "center") select 1;
 	{
 		if (_x getVariable ["ownerPUID","0"] == _uid) exitWith {
 			spawn_plot = _x;
 		};
-	} count (getMarkerPos "center" nearEntities ["Plastic_Pole_EP1_DZ",(_radius * 1.5)]);
+	} count (entities "Plastic_Pole_EP1_DZ");
 };
 
 if (spawn_bodyCheck > 0) then {
