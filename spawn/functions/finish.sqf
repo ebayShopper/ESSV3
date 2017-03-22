@@ -1,6 +1,6 @@
 if (player distance respawn_west_original < 100) then {
 	// Ground spawn
-	player setPosATL [_grid select 0,_grid select 1,(_grid select 2)+.1]; //Prevents swimming in ground glitch
+	player setPosATL _grid;
 	
 	// Show infoText if not in HALO spawn
 	_nearestCity = nearestLocations [_grid, ["NameCityCapital","NameCity","NameVillage","NameLocal"],1000];
