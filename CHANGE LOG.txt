@@ -1,1 +1,2 @@
 2017-03-14 [FIXED] Added missing support for VIP classes in class_public and VIP spawns in spawn_public. Thanks MG-Maximus.
+2017-03-22 [ADDED] German translations submitted by @DAmNRelentless
