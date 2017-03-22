@@ -3,39 +3,51 @@
 	<Package name="ESS">
 		<Key ID="STR_ESS_GROUP">
 			<English>By my group</English>
+			<German>Von meiner Gruppe</German>
 		</Key>
 		<Key ID="STR_ESS_PLOT">
 			<English>By my plot</English>
+			<German>Von meinem Grundstück</German>
 		</Key>
 		<Key ID="STR_ESS_BLOCKED">
 			<English>Note: some spawns were blocked due to a body of yours within %1m</English>
+			<German>Anmerkung: Einige Spawnpunkte wurden wegen einer Leiche von dir im Umkreis von %1m blockiert</German>
 		</Key>
 		<Key ID="STR_ESS_HUMANITY_TOO_HIGH">
 			<English>Your humanity must be less than %1 for this.</English>
+			<German>Deine Menschlichkeit muss dafür unter %1 sein.</German>
 		</Key>
 		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
 			<English>Your humanity must be greater than %1 for this.</English>
+			<German>Deine Menschlichkeit muss dafür über %1 sein.</German>
 		</Key>
 		<Key ID="STR_ESS_NEED_CVIP">
 			<English>You need VIP class level %1 for this.</English>
+			<German>Du brauchst VIP-Klassen-Level %1 dafür.</German>
 		</Key>
 		<Key ID="STR_ESS_NEED_SVIP">
 			<English>You need VIP spawn level %1 for this.</English>
+			<German>Du brauchst VIP-Spawn-Level %1 dafür.</German>
 		</Key>
 		<Key ID="STR_ESS_NOTHING_SELECTED">
 			<English>Nothing selected!</English>
+			<German>Nichts ausgewählt!</German>
 		</Key>
 		<Key ID="STR_ESS_CLASS_SELECT">
 			<English>Class Selection</English>
+			<German>Klassenauswahl</German>
 		</Key>
 		<Key ID="STR_ESS_HALO_SELECT">
 			<English>Spawn Type Selection</English>
+			<German>Spawntypauwahl</German>
 		</Key>
 		<Key ID="STR_ESS_SPAWN_SELECT">
 			<English>Spawn Selection</English>
+			<German>Spawnauswahl</German>
 		</Key>
 		<Key ID="STR_ESS_GROUND">
 			<English>Ground</English>
+			<German>Boden</German>
 		</Key>
 	</Package>
 </Project>
