@@ -22,4 +22,7 @@ fnc_usec_damageHandler = fnc_usec_damageHandlerOriginal;
 player_spawn_2 = player_spawn_2_original;
 
 dayz_slowCheck = [] spawn player_spawn_2;
+
+call player_forceSave;
+
 if (dayz_enableRules && (profileNamespace getVariable ["streamerMode",0] == 0)) then { dayz_rulesHandle = execVM "rules.sqf"; };
