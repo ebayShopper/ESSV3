@@ -50,8 +50,8 @@
 			<German>Boden</German>
 		</Key>
 		<Key ID="STR_ESS_AIR">
-			<English>Air</English>
-			<German>Luft</German>
+			<English>Halo</English>
+			<German>Fallschirm</German>
 		</Key>
 	</Package>
 </Project>
