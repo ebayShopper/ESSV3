@@ -152,7 +152,7 @@ class HaloDialog
 		class HaloButtonAir
 		{
 			idc = -1;
-			text = $STR_DN_AIR;
+			text = $STR_ESS_AIR;
 			x = .402585 * safezoneW + safezoneX;
 			y = .533 * safezoneH + safezoneY;
 			w = .0743267 * safezoneW;

@@ -49,5 +49,9 @@
 			<English>Ground</English>
 			<German>Boden</German>
 		</Key>
+		<Key ID="STR_ESS_AIR">
+			<English>HALO</English>
+			<German>Fallschirm</German>
+		</Key>
 	</Package>
 </Project>
