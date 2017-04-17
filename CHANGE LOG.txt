@@ -2,3 +2,4 @@
 2017-03-22 [ADDED] German translations submitted by @DAmNRelentless
 2017-03-24 [FIXED] Added 1.0.6.2 workaround for swimming in air or ground after relog and respawn on certain maps. Thanks @Cherdenko for reporting.
 2017-04-13 [ADDED] Russian translations submitted by @dreamforceinc
+2017-04-17 [FIXED] Player did not rejoin saved group after picking a class containing a radio if dayz_requireRadio=true and radio was not in default gear.

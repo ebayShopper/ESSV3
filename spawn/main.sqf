@@ -1,6 +1,6 @@
 private ["_bag","_bmags","_bmags2","_bmags3","_bpistol","_btools","_bweps","_coins","_dir","_female",
-"_gMags","_grid","_gTools","_haloJump","_handle","_isPZombie","_mags","_mags2","_mags3","_main","_model",
-"_muzzle","_myModel","_nearestCity","_onBack","_plane","_pos","_tools","_unit","_wealth","_weps"];
+"_gMags","_grid","_gTools","_haloJump","_handle","_isPZombie","_leader","_mags","_mags2","_mags3","_main","_model",
+"_muzzle","_myModel","_nearestCity","_onBack","_oldGroup","_plane","_pos","_savedGroup","_tools","_unit","_wealth","_weps"];
 
 waitUntil {uiSleep 0.4; (!isNil "PVCDZ_plr_Login2" && {count PVCDZ_plr_Login2 > 0})};
 
