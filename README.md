@@ -50,7 +50,10 @@ Improvements over V2:
 	```sqf
 	#include "spawn_config.sqf"
 	```
-7. If using infiSTAR, in AHconfig.sqf find <code>/*  check MapSingleClick  */ _OMC = true;	/* true or false */	/* announces: "MapSingleClick modified", if modification is found - NEEDS _MBC to be true! */</code> and make sure it's disabled!
+7. If using infiSTAR, in AHconfig.sqf make sure this option is disabled!
+	```sqf
+	/*  check MapSingleClick  */ _OMC = true;	/* true or false */	/* announces: "MapSingleClick modified", if modification is found - NEEDS _MBC to be true! */
+	```
 
 8. Edit the settings in both config files to your liking. See DOCUMENTATION.MD for detailed information.
 
