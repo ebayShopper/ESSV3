@@ -50,8 +50,9 @@ Improvements over V2:
 	```sqf
 	#include "spawn_config.sqf"
 	```
-	
-7. Edit the settings in both config files to your liking. See DOCUMENTATION.MD for detailed information.
+7. If using infiSTAR, in AHconfig.sqf find <code>/*  check MapSingleClick  */ _OMC = true;	/* true or false */	/* announces: "MapSingleClick modified", if modification is found - NEEDS _MBC to be true! */</code> and make sure it's disabled!
+
+8. Edit the settings in both config files to your liking. See DOCUMENTATION.MD for detailed information.
 
 # Legal:
 This work is licensed under the DAYZ MOD LICENSE SHARE ALIKE (DML-SA). The full license is here:<br /> https://www.bistudio.com/community/licenses/dayz-mod-license-share-alike
