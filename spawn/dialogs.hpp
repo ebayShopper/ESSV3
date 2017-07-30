@@ -31,13 +31,14 @@
 	rowHeight = .04;\
 	class ScrollBar\
 	{\
-		color[] = {1, 1, 1, 0.6};\
-		colorActive[] = {0.5, 0.5, 0.5, 1};\
-		colorDisabled[] = {1, 1, 1, 0.3};\
-		thumb = "\z\addons\dayz_code\gui\grey\igui_scrollbar_thumb_ca.paa";\
-		arrowFull = "\z\addons\dayz_code\gui\grey\igui_arrow_top_active_ca.paa";\
-		arrowEmpty = "\z\addons\dayz_code\gui\grey\igui_arrow_top_ca.paa";\
-		border = "\z\addons\dayz_code\gui\grey\igui_border_scroll_ca.paa";\
+		color[] = {.5,.5,.5,.5};\
+		colorActive[] = {.5,.5,.5,.3};\
+		colorDisabled[] = {.5,.5,.5,.1};\
+		thumb = "";\
+		arrowFull = "\ca\ui\data\arrow_up_ca.paa";\
+		arrowEmpty = "\ca\ui\data\arrow_up_ca.paa";\
+		border = "\ca\ui\data\ui_border_scroll_ca.paa";\
+		shadow = 0;\
 	};\
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * .6)";\
 	soundSelect[] = {"",.1,1};\
