@@ -3,66 +3,79 @@
 	<Package name="ESS">
 		<Key ID="STR_ESS_GROUP">
 			<English>By my group</English>
+			<French>Par mon groupe</French>
 			<German>Von meiner Gruppe</German>
 			<Russian>Около группы</Russian>
 		</Key>
 		<Key ID="STR_ESS_PLOT">
 			<English>By my plot</English>
+			<French>Par mon Plot</French>
 			<German>Von meinem Grundstück</German>
 			<Russian>Около базы</Russian>
 		</Key>
 		<Key ID="STR_ESS_BLOCKED">
 			<English>Note: some spawns were blocked due to a body of yours within %1m</English>
+			<French>Note: certains engins ont été bloqués à cause d'un corps à vous a %1m</French>
 			<German>Anmerkung: Einige Spawnpunkte wurden wegen einer Leiche von dir im Umkreis von %1m blockiert</German>
 			<Russian>Некоторые точки спавна заблокированы, т.к. они ближе %1м от вашего тела.</Russian>
 		</Key>
 		<Key ID="STR_ESS_HUMANITY_TOO_HIGH">
 			<English>Your humanity must be less than %1 for this.</English>
+			<French>Votre humanité doit être inférieure à %1 pour cela.</French>
 			<German>Deine Menschlichkeit muss dafür unter %1 sein.</German>
 			<Russian>Ваша человечность должна быть меньше %1.</Russian>
 		</Key>
 		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
 			<English>Your humanity must be greater than %1 for this.</English>
+			<French>Votre humanité doit être supérieur à %1 pour cela.</French>
 			<German>Deine Menschlichkeit muss dafür über %1 sein.</German>
 			<Russian>Ваша человечность должна быть больше %1.</Russian>
 		</Key>
 		<Key ID="STR_ESS_NEED_CVIP">
 			<English>You need VIP class level %1 for this.</English>
+			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
 			<German>Du brauchst VIP-Klassen-Level %1 dafür.</German>
 <!--			<Russian>У вас должен быть уровень %1 для VIP-класса.</Russian>	-->
 		</Key>
 		<Key ID="STR_ESS_NEED_SVIP">
 			<English>You need VIP spawn level %1 for this.</English>
+			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
 			<German>Du brauchst VIP-Spawn-Level %1 dafür.</German>
 <!--			<Russian>У вас должен быть уровень %1 для VIP-спавна.</Russian>	-->
 		</Key>
 		<Key ID="STR_ESS_NOTHING_SELECTED">
 			<English>Nothing selected!</English>
+			<French>Rien n'a été sélectionné!</French>
 			<German>Nichts ausgewählt!</German>
 			<Russian>Ничего не выбрано!</Russian>
 		</Key>
 		<Key ID="STR_ESS_CLASS_SELECT">
 			<English>Class Selection</English>
+			<French> sélection de classe </French>
 			<German>Klassenauswahl</German>
 			<Russian>Выбор класса</Russian>
 		</Key>
 		<Key ID="STR_ESS_HALO_SELECT">
 			<English>Spawn Type Selection</English>
+			<French>Sélection du type</French>
 			<German>Spawntypauwahl</German>
 			<Russian>Выбор типа спавна</Russian>
 		</Key>
 		<Key ID="STR_ESS_SPAWN_SELECT">
 			<English>Spawn Selection</English>
+			<French>Sélectionner un spawn</French>
 			<German>Spawnauswahl</German>
 			<Russian>Выбор точки спавна</Russian>
 		</Key>
 		<Key ID="STR_ESS_GROUND">
 			<English>Ground</English>
+			<French>Térreste</French>
 			<German>Boden</German>
 			<Russian>ЗЕМЛЯ</Russian>
 		</Key>
 		<Key ID="STR_ESS_AIR">
 			<English>HALO</English>
+			<French>Air</French>
 			<German>Fallschirm</German>
 			<Russian>ПАРАШЮТ</Russian>
 		</Key>
