@@ -1,6 +1,5 @@
 private ["_bag","_class","_female","_model","_name","_offset","_pos","_weps"];
 disableSerialization;
-#include "scripts.sqf"
 
 _class = class_public select 0;
 _name = lbText [8888,(lbCurSel 8888)];

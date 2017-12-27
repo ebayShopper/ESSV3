@@ -5,3 +5,5 @@
 2017-04-17 [FIXED] Player did not rejoin saved group after picking a class containing a radio if dayz_requireRadio=true and radio was not in default gear.
 2017-07-30 [FIXED] Missing grey scroll bar textures in vanilla 1.8.9 and Epoch 1.0.6.2
 2017-10-15 [ADDED] French translations submitted by PanzerMad
+2017-12-27 [UPDATED] For DayZ Epoch 1.0.6.2 and DayZ Mod 1.9
+2017-12-27 [ADDED] Loading message and timer on black screen after gender selection

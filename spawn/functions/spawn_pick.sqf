@@ -1,6 +1,5 @@
 private ["_block","_hlevel","_humanity","_level","_name","_spawn"];
 disableSerialization;
-#include "scripts.sqf"
 
 _block = false;
 _spawn = [];

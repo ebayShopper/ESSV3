@@ -1,6 +1,5 @@
 private ["_hlevel","_humanity","_index","_level","_lock"];
 disableSerialization;
-#include "scripts.sqf"
 
 _humanity = player getVariable ["humanity",0];
 

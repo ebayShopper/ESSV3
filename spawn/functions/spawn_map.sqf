@@ -1,6 +1,5 @@
 private ["_ctrl","_grid","_name","_spawn","_zoom"];
 disableSerialization;
-#include "scripts.sqf"
 
 _zoom = 0.35;
 _spawn = ["","","","",""];

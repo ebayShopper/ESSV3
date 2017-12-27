@@ -1,4 +1,4 @@
-Provides extra spawn options for Epoch 1.0.6 and DayZ 1.8.8:
+Provides extra spawn options for DayZ Epoch and vanilla DayZ Mod:
 * Choose air or ground spawn
 * Spawns and loadouts can be restricted by humanity and UID
 * Spawns within x meters of the player's body can be blocked
@@ -33,10 +33,10 @@ Improvements over V2:
 	
 3. Put the \spawn\ folder and stringtable.xml in your mission root.
 
-4. In `dayz_server\compile\server_playerSetup.sqf` find <code>PVCDZ_plr_Login2 = [_worldspace,_state];</code> Change to:
+4. In `dayz_server\compile\server_playerSetup.sqf` find <code>PVCDZ_plr_Login2 = [_worldspace,_state,_randomKey];</code> Change to:
 
 	```sqf
-	PVCDZ_plr_Login2 = [[0,respawn_west_original],_state,_worldspace,_randomSpot,([_randomSpot,_playerID] call spawn_config)];
+	PVCDZ_plr_Login2 = [[0,respawn_west_original],_state,_worldspace,_randomKey,_randomSpot,([_randomSpot,_playerID] call spawn_config)];
 	```
 	
 5. If using body check, in `dayz_server\compile\server_playerDied.sqf` find <code>_newObject setVariable ["bodyName",_playerName,true];</code> Add below:
@@ -51,7 +51,9 @@ Improvements over V2:
 	#include "spawn_config.sqf"
 	```
 	
-7. Edit the settings in both config files to your liking. See DOCUMENTATION.MD for detailed information.
+7. Edit the settings in both config files to your liking. See DOCUMENTATION.md for detailed information.
+
+8. Add the needed exceptions to BattlEye\scripts.txt. See SCRIPTS EXAMPLE.txt.
 
 # Legal:
 This work is licensed under the DAYZ MOD LICENSE SHARE ALIKE (DML-SA). The full license is here:<br /> https://www.bistudio.com/community/licenses/dayz-mod-license-share-alike

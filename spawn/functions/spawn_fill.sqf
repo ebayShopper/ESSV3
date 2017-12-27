@@ -1,6 +1,5 @@
 private ["_block","_blockGroup","_blockPlot","_bodies","_body","_grid","_hlevel","_humanity","_index","_inGroup","_lb","_level","_name","_uid"];
 disableSerialization;
-#include "scripts.sqf"
 
 _block = [];
 _blockGroup = false;
@@ -47,7 +46,7 @@ if (spawn_bodyCheck > 0) then {
 	} count _bodies;
 	
 	if (count _block > 0 or _blockGroup or _blockPlot) then {
-		systemChat format [localize "STR_ESS_BLOCKED",spawn_bodyCheck];
+		systemChat format[localize "STR_ESS_BLOCKED",spawn_bodyCheck];
 	};
 };
 

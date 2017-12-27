@@ -1,6 +1,6 @@
 private ["_bag","_bmags","_bmags2","_bmags3","_bpistol","_btools","_bweps","_coins","_dir","_female",
-"_gMags","_grid","_gTools","_haloJump","_handle","_isPZombie","_leader","_mags","_mags2","_mags3","_main","_model",
-"_muzzle","_myModel","_nearestCity","_onBack","_oldGroup","_plane","_pos","_savedGroup","_tools","_unit","_wealth","_weps"];
+"_gMags","_grid","_gTools","_haloJump","_handle","_isPZombie","_mags","_mags2","_mags3","_main","_model",
+"_muzzle","_myModel","_nearestCity","_onBack","_plane","_pos","_tools","_unit","_wealth","_weps"];
 
 waitUntil {uiSleep 0.4; (!isNil "PVCDZ_plr_Login2" && {count PVCDZ_plr_Login2 > 0})};
 
@@ -19,10 +19,18 @@ waitUntil {camCommitted spawn_camera};
 spawn_camera setDir 180;
 
 sched_townGenerator_ready = {true};
-waitUntil {uiSleep 0.4; !isNil "Dayz_loginCompleted"};
+waitUntil {
+	uiSleep 0.4;
+	if (!dayz_displayGenderSelect) then {
+		[format[localize "STR_AUTHENTICATING" + " %1",floor(diag_tickTime - dayz_loginTime)],1] call dayz_rollingMessages;
+	};
+	!isNil "Dayz_loginCompleted"
+};
+
+["",1] call dayz_rollingMessages;
 
 //Exit if not a fresh spawn
-if !(PVCDZ_plr_Login2 select 3) exitWith {
+if !(PVCDZ_plr_Login2 select 4) exitWith {
 	#include "functions\finish.sqf"
 	#include "functions\cleanup.sqf"
 };
@@ -30,7 +38,7 @@ if !(PVCDZ_plr_Login2 select 3) exitWith {
 _isPZombie = player isKindOf "PZombie_VB";
 
 //Add private classes and spawns this player has access to.
-spawn_config = PVCDZ_plr_Login2 select 4;
+spawn_config = PVCDZ_plr_Login2 select 5;
 class_public = (spawn_config select 0) + class_public;
 spawn_public = (spawn_config select 1) + spawn_public;
 
@@ -41,7 +49,6 @@ spawn_levels = spawn_config select 3;
 waitUntil {uiSleep 0.1; !isNull findDisplay 46};
 0 fadeSound 0;
 0 fadeMusic 0;
-#include "functions\scripts.sqf"
 
 if (class_selection && !_isPZombie) then {
 	class_bot = objNull;
@@ -238,7 +245,6 @@ if ((halo_selection or halo_force) && !_isPZombie) then {
 			player action ["getInCargo",_plane,2];
 			_pos = group player addWaypoint [_grid,0];
 			[_grid,_plane,_unit,_pos,_haloJump] spawn {
-				#include "functions\scripts.sqf"
 				_plane = _this select 1;
 				_plane setDamage .8;
 				waitUntil {_plane distance (_this select 0) < (DZE_HaloSpawnHeight + 200)};

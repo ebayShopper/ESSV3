@@ -1,0 +1,22 @@
+These are example exceptions to add to the stock BattlEye\scripts.txt exceptions.
+Further customizing by using different or additional parts of the relevant scripts is recommended.
+
+5 addBackpack !"class_bot addBackpack _bag;};\nclass_bot setFace" !"addBackpack _bag;\n_bag = unitBackpack player;\n[_bmags,2,_bag] call class_"
+5 addMagazine !"};\n\nswitch _type do {\ncase 1: { for \"_i\" from 1 to _amount do {_object addMagazine _item}; };"
+5 addWeapon !"case 3: { _object addWeaponCargoGlobal [_item,_amount]; };\n};\n};\n} forEach _items;" !"x in weapons class_bot) then {\nclass_bot addWeapon _x;" !"_mags,1,player] call class_fillItems;\n{player addWeapon"
+5 allDead !"allDead;\n{\n_body = _x;\n{\n\nif (count _x == 4"
+5 camCreate !"random 99999),99999];\nspawn_camera = \"camera\" camCreate spawn_cameraPos;"
+5 cameraEffect !"cameraEffect [\"external\",\"back\"];\nspawn_camera camSetFOV 0.7;\nspawn_camera"
+1 compile !"compile preprocessFileLineNumbers \"spawn\\functions\\"
+5 createAgent !"50*(cos _dir),0];\n_unit = createAgent [\"Survivor2_DZ\",_grid,[],0," !"deleteVehicle class_bot;\nclass_bot = createAgent [_model,[0,0,0],[],0,"
+5 createDialog !"spawn_mapPos = [0,0,0];\ncreateDialog \"SpawnDialog\";"
+5 createVehicleLocal !"deleteVehicle class_bot;\nclass_bot = _model createVehicleLocal [0,0,0];"
+1 execVM !";\n};\n\nexecVM \"spawn\\main.sqf\";"
+5 lbCurSel !"_name = lbText [8888,(lbCurSel 8888)];\n{\nif (_name == (_x"
+5 lbSet !"lbSetColor [8888,_index, switch true do {\ncase (_level >" !"_lb lbSetColor [_index, switch true do {\ncase (count _x == 2"
+5 lbSetPicture !"lbSetColor [8888,_index, switch true do {\ncase (_level >" !"_lb lbSetColor [_index, switch true do {\ncase (count _x == 2"
+5 player_humanityMorph !"[],[]]};\n};\n_handle = [dayz_playerUID,dayz_characterID,_model] spawn player_humanityMorph;\nuiSleep"
+5 setDamage !"_this select 1;\n_plane setDamage .8;\nwaitUntil {_plane distance (_this"
+5 setPosASL !"select 1,0]) then {\nspawn_camera setPosASL _offset;"
+5 setVehicle !"_plane setVehicleLock \"LOCKED\";\n_plane flyInHeight DZE_HaloSpawnHeight"
+5 systemChat !"systemChat format[localize \"STR_ESS_"

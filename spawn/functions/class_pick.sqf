@@ -1,6 +1,5 @@
 private ["_block","_class","_hlevel","_humanity","_level","_name"];
 disableSerialization;
-#include "scripts.sqf"
 
 _class = [];
 _name = lbText [8888,(lbCurSel 8888)];

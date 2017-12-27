@@ -13,21 +13,9 @@ player_spawn_2 = {};
 
 dayz_paraSpawn = false; //Disable stock HALO spawn
 
-//Temporary until 1.0.6.2 and 1.8.9 release
-fn_exitSwim = compile preprocessFileLineNumbers "spawn\functions\fn_exitSwim.sqf";
-
 if (!class_epoch) then { //Undefined variables in vanilla
-	dayz_typedBags = ["bloodTester","bloodBagANEG","bloodBagAPOS","bloodBagBNEG","bloodBagBPOS","bloodBagABNEG","bloodBagABPOS","bloodBagONEG","bloodBagOPOS","wholeBloodBagANEG","wholeBloodBagAPOS","wholeBloodBagBNEG","wholeBloodBagBPOS","wholeBloodBagABNEG","wholeBloodBagABPOS","wholeBloodBagONEG","wholeBloodBagOPOS"];
-	respawn_west_original = getMarkerPos "respawn_west";
 	DZE_HaloJump = false;
 	DZE_HaloSpawnHeight = 2000;
-	FNC_GetPos = {
-		private "_pos";
-		_thingy = _this select 0;
-		_pos = getPosASL _thingy;
-		if !(surfaceIsWater _pos) then {_pos =  ASLToATL _pos;};
-		_pos
-	};
 };
 
 if (spawn_selection) then {
