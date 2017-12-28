@@ -8,7 +8,7 @@ waitUntil {uiSleep 0.4; (!isNil "PVCDZ_plr_Login2" && {count PVCDZ_plr_Login2 > 
 BIS_fnc_infoText = {};
 
 // Worldspace from vanilla spawn selection or server_playerSetup
-_grid = (PVCDZ_plr_Login2 select 2) select 1;
+_grid = (PVCDZ_plr_Login2 select 3) select 1;
 
 spawn_cameraPos = [(random 99999),(random 99999),99999];
 spawn_camera = "camera" camCreate spawn_cameraPos;

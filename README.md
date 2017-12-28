@@ -36,7 +36,7 @@ Improvements over V2:
 4. In `dayz_server\compile\server_playerSetup.sqf` find <code>PVCDZ_plr_Login2 = [_worldspace,_state,_randomKey];</code> Change to:
 
 	```sqf
-	PVCDZ_plr_Login2 = [[0,respawn_west_original],_state,_worldspace,_randomKey,_randomSpot,([_randomSpot,_playerID] call spawn_config)];
+	PVCDZ_plr_Login2 = [[0,respawn_west_original],_state,_randomKey,_worldspace,_randomSpot,([_randomSpot,_playerID] call spawn_config)];
 	```
 	
 5. If using body check, in `dayz_server\compile\server_playerDied.sqf` find <code>_newObject setVariable ["bodyName",_playerName,true];</code> Add below:
