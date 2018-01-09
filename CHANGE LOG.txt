@@ -7,3 +7,5 @@
 2017-10-15 [ADDED] French translations submitted by PanzerMad
 2017-12-27 [UPDATED] For DayZ Epoch 1.0.6.2 and DayZ Mod 1.9
 2017-12-27 [ADDED] Loading message and timer on black screen after gender selection
+2018-01-04 [ADDED] Spanish and Russian translations submitted by @juandayz and @FordGH
+2018-01-09 [FIXED] Z_MoneyVariable undefined in vanilla DayZ Mod

@@ -16,6 +16,7 @@ dayz_paraSpawn = false; //Disable stock HALO spawn
 if (!class_epoch) then { //Undefined variables in vanilla
 	DZE_HaloJump = false;
 	DZE_HaloSpawnHeight = 2000;
+	Z_MoneyVariable = "cashMoney";
 };
 
 if (spawn_selection) then {
