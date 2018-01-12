@@ -249,9 +249,11 @@ if ((halo_selection or halo_force) && !_isPZombie) then {
 				_plane setDamage .8;
 				waitUntil {_plane distance (_this select 0) < (DZE_HaloSpawnHeight + 200)};
 				player spawn BIS_fnc_halo;
+				player allowDamage false; //Block damage from clipping plane
 				player action ["eject",_plane];
 				player setVelocity [(velocity player) select 0,(velocity player) select 1,-15];
 				uiSleep 25;
+				player allowDamage true;
 				deleteVehicle _plane;
 				deleteVehicle (_this select 2);
 				deleteWayPoint (_this select 3);

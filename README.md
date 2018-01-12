@@ -31,7 +31,7 @@ Improvements over V2:
 	#include "spawn\dialogs.hpp"
 	```
 	
-3. Put the \spawn\ folder and stringtable.xml in your mission root.
+3. Put the \spawn\ folder and stringtable.xml in your mission root. For vanilla DayZMod put the \custom\ folder in your mission root too.
 
 4. In `dayz_server\compile\server_playerSetup.sqf` find <code>PVCDZ_plr_Login2 = [_worldspace,_state,_randomKey];</code> Change to:
 

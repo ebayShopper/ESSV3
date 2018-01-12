@@ -9,3 +9,5 @@
 2017-12-27 [ADDED] Loading message and timer on black screen after gender selection
 2018-01-04 [ADDED] Spanish and Russian translations submitted by @juandayz and @FordGH
 2018-01-09 [FIXED] Z_MoneyVariable undefined in vanilla DayZ Mod
+2018-01-12 [ADDED] Added custom BIS_fnc_halo with all Epoch improvements (i.e. auto open chute, altimeter and block glitch death) for vanilla DayZ Mod
+2018-01-12 [FIXED] Blocked damage from clipping plane on eject

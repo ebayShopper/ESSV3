@@ -14,7 +14,10 @@ player_spawn_2 = {};
 dayz_paraSpawn = false; //Disable stock HALO spawn
 
 if (!class_epoch) then { //Undefined variables in vanilla
+	BIS_fnc_halo = compile preprocessFileLineNumbers "custom\fn_halo.sqf";
+	DZE_HaloAltitudeMeter = false;
 	DZE_HaloJump = false;
+	DZE_HaloOpenChuteHeight = 180;
 	DZE_HaloSpawnHeight = 2000;
 	Z_MoneyVariable = "cashMoney";
 };
