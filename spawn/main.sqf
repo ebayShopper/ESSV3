@@ -167,9 +167,9 @@ if (class_selection && !_isPZombie) then {
 		default {0};
 	};
 
-	_wealth = player getVariable ["cashMoney",0];
+	_wealth = _player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
 	if (_wealth < _coins) then {
-		player setVariable ["cashMoney",(_wealth + _coins),true];
+		player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_wealth + _coins),true];
 	};
 };
 
