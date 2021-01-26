@@ -1,3 +1,5 @@
+For Epoch 1.0.7
+
 Provides extra spawn options for DayZ Epoch and vanilla DayZ Mod:
 * Choose air or ground spawn
 * Spawns and loadouts can be restricted by humanity and UID
@@ -54,6 +56,8 @@ Improvements over V2:
 7. Edit the settings in both config files to your liking. See DOCUMENTATION.md for detailed information.
 
 8. Add the needed exceptions to BattlEye\scripts.txt. See SCRIPTS EXAMPLE.txt.
+
+9. Only DayZ Mod user need to add the stringtable to the mission. For Epoch users it is build in already.
 
 # Legal:
 This work is licensed under the DAYZ MOD LICENSE SHARE ALIKE (DML-SA). The full license is here:<br /> https://www.bistudio.com/community/licenses/dayz-mod-license-share-alike
