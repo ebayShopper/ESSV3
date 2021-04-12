@@ -9,11 +9,11 @@ class_selection = true; //Enable class selection dialog
 #define START_ITEMS "HandRoadFlare","ItemBandage",2,"ItemPainkiller","ItemWaterbottle","FoodPistachio"
 class_public = [ // These are visible to anyone on the server
 	[(localize "str_playerstats_bandit")+" Lvl1","Bandit1_DZ","BanditW1_DZ",[START_ITEMS,"17Rnd_9x19_glock17",2],["G17_DZ"],"",[],[],0,-5000,0,""],
-	[(localize "str_playerstats_bandit")+" Lvl2","Bandit1_DZ","BanditW1_DZ",[START_ITEMS,"17Rnd_9x19_glock17",3,"ItemMorphine"],["G17_DZ"],"DZ_Assault_Pack_EP1",[],[],0,-10000,0,""],
-	[(localize "str_playerstats_bandit")+" Lvl3","Bandit1_DZ","BanditW1_DZ",[START_ITEMS,"17Rnd_9x19_glock17",4,"ItemMorphine"],["G17_DZ"],"DZ_TK_Assault_Pack_EP1",[],[],0,-15000,0,"MeleeHatchet"],
+	[(localize "str_playerstats_bandit")+" Lvl2","Bandit1_DZ","BanditW1_DZ",[START_ITEMS,"17Rnd_9x19_glock17",3,"ItemMorphine"],["G17_DZ"],if (class_epoch) then {"Assault_Pack_DZE1"} else {"DZ_Assault_Pack_EP1"},[],[],0,-10000,0,""],
+	[(localize "str_playerstats_bandit")+" Lvl3","Bandit1_DZ","BanditW1_DZ",[START_ITEMS,"17Rnd_9x19_glock17",4,"ItemMorphine"],["G17_DZ"],if (class_epoch) then {"TK_Assault_Pack_DZE1"} else {"DZ_TK_Assault_Pack_EP1"},[],[],0,-15000,0,"MeleeHatchet"],
 	[(localize "str_playerstats_hero")+" Lvl1",if (class_epoch) then {"Soldier_Sniper_PMC_DZ"} else {"Survivor3_DZ"},"SurvivorW2_DZ",[START_ITEMS,"6Rnd_45ACP",2],["Revolver_DZ"],"",[],[],0,5000,0,""],
-	[(localize "str_playerstats_hero")+" Lvl2",if (class_epoch) then {"Soldier_Sniper_PMC_DZ"} else {"Survivor3_DZ"},"SurvivorW2_DZ",[START_ITEMS,"6Rnd_45ACP",3,"ItemMorphine"],["Revolver_DZ"],"DZ_Assault_Pack_EP1",[],[],0,10000,0,""],
-	[(localize "str_playerstats_hero")+" Lvl3",if (class_epoch) then {"Soldier_Sniper_PMC_DZ"} else {"Survivor3_DZ"},"SurvivorW2_DZ",[START_ITEMS,"6Rnd_45ACP",4,"ItemMorphine"],["Revolver_DZ"],"DZ_TK_Assault_Pack_EP1",[],[],0,15000,0,"MeleeHatchet"],
+	[(localize "str_playerstats_hero")+" Lvl2",if (class_epoch) then {"Soldier_Sniper_PMC_DZ"} else {"Survivor3_DZ"},"SurvivorW2_DZ",[START_ITEMS,"6Rnd_45ACP",3,"ItemMorphine"],["Revolver_DZ"],if (class_epoch) then {"Assault_Pack_DZE1"} else {"DZ_Assault_Pack_EP1"},[],[],0,10000,0,""],
+	[(localize "str_playerstats_hero")+" Lvl3",if (class_epoch) then {"Soldier_Sniper_PMC_DZ"} else {"Survivor3_DZ"},"SurvivorW2_DZ",[START_ITEMS,"6Rnd_45ACP",4,"ItemMorphine"],["Revolver_DZ"],if (class_epoch) then {"TK_Assault_Pack_DZE1"} else {"DZ_TK_Assault_Pack_EP1"},[],[],0,15000,0,"MeleeHatchet"],
 	[localize "str_playerstats_survivor","Survivor2_DZ","SurvivorW2_DZ",[START_ITEMS,"8Rnd_9x18_Makarov",2],["Makarov_DZ"],"",[],[],0,0,0]
 ];
 
@@ -27,8 +27,8 @@ spawn_nearGroup = false; // Allow players to spawn near their group. BodyCheck c
 spawn_nearPlot = false; // Allow players to spawn near their plot. BodyCheck can override.
 spawn_radius = 800; // Distance around spawn to find a safe pos. Lower is closer to exact coordinates. Do not set too low or BIS_fnc_findSafePos may fail.
 
-spawn_public = switch (toLower worldName) do {
-	case "chernarus": {
+spawn_public = call {
+	if ((toLower worldName) in ["chernarus","chernarus_winter"]) exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[4523,2444,0],[12037,9100,0],[6723,2562,0],[10417,2120,0],[1896,2242,0],[13470,6306,0]],0,0,1], // Random will never be blocked, so always keep it if using body check.
 			[localize "str_location_balota",[4523,2444,0],0,0],
@@ -58,7 +58,7 @@ spawn_public = switch (toLower worldName) do {
 			[localize "str_location_zelenogorsk",[2858,5313,0],0,0]
 		]
 	};
-	case "tavi": {
+	if ((toLower worldName) in ["tavi","taviana"]) exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[9093,2614,0],[17588,4952,0],[15954,15847,0],[16674,13930,0],[11361,6685,0],[17744,10299,0],[18292,7537,0],[13561,19300,0],[15246,17425,0],[12268,9763,0]],0,0,1],
 			["Topolka",[9093,2614,0],0,0],
@@ -78,7 +78,7 @@ spawn_public = switch (toLower worldName) do {
 			["Chernovar",[5904,10519,0],0,0]
 		]
 	};
-	case "napf": {
+	if ((toLower worldName) == "napf") exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[5411,16676,0],[1511,11479,0],[12231,16319,0],[6946,17385,0],[12862,14850,0],[4672,14940,0],[2720,12226,0],[4104,13026,0],[1461,10584,0],[10283,18449,0],[10709,17085,0]],0,0,1],
 			["Seltishafen",[5411,16676,0],0,0],
@@ -104,7 +104,7 @@ spawn_public = switch (toLower worldName) do {
 			["Waldegg",[8538,852,0],0,0]
 		]
 	};
-	case "lingor": {
+	if ((toLower worldName) == "lingor") exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[2085,5501,0],[1355,315,0],[4550,913,0],[8880,1703,0],[580,5547,0],[3250,2556,0],[6143,2753,0],[1269,2858,0],[8295,8667,0],[9072,7323,0],[6899,3971,0]],0,0,1],
 			["Vidora",[2085,5501,0],0,0],
@@ -121,7 +121,7 @@ spawn_public = switch (toLower worldName) do {
 			// Above are defaults
 		]
 	};
-	case "namalsk": {
+	if ((toLower worldName) == "namalsk") exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[4620,10916,0],[7600,6020,0],[6498,11851,0],[7668,11707,0],[4340,4960,0],[7885,7206,0],[3013,7506,0],[4673,10004,0],[7859,9096,0],[8756,10119,0],[5823,5641,0]],0,0,1],
 			["Lubjansk",[4620,10916,0],0,0],
@@ -138,7 +138,7 @@ spawn_public = switch (toLower worldName) do {
 			// Above are defaults
 		]
 	};
-	case "sauerland": {
+	if ((toLower worldName) == "sauerland") exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[15448,8466,0],[19488,7462,0],[19478,12440,0],[20210,14501,0],[16453,6895,0],[19666,10377,0],[11000,10157,0],[10669,13320,0],[11349,12225,0],[12104,8936,0],[12879,14983,0]],0,0,1],
 			["Buersfeld",[15448,8466,0],0,0],
@@ -164,7 +164,7 @@ spawn_public = switch (toLower worldName) do {
 			["Old Airfield",[17253,2167,0],0,0]
 		]
 	};
-	case "panthera2": {
+	if ((toLower worldName) == "panthera2") exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[2354,5213,0],[3281,3348,0],[4793,1862,0],[5969,944,0],[7873,1403,0],[8425,3152,0],[8679,5043,0],[7961,4949,0],[6420,6127,0],[4823,6512,0],[3354,6649,0],[5549,7227,0],[4624,8042,0],[2267,9042,0],[1062,9359,0],[1646,8814,0],[5406,3876,0],[7883,1936,0],[7022,1134,0],[5840,2363,0],[2688,3400,0]],0,0,1],
 			["Sella Nevea",[2354,5213,0],0,0],
@@ -191,7 +191,7 @@ spawn_public = switch (toLower worldName) do {
 			["FOB Boriana",[2688,3400,0],0,0]
 		]
 	};
-	case "smd_sahrani_a2": {
+	if ((toLower worldName) == "smd_sahrani_a2") exitwith {
 		[
 			[localize "str_disp_srvsetup_random",[[11369,5348,0],[9343,5953,0],[7645,6408,0],[12369,7108,0],[9131,8319,0],[10697,9490,0],[13197,8848,0],[14307,12496,0],[9763,14424,0],[10690,16186,0],[17314,14304,0],[18952,13913,0],[4541,15297,0],[9691,11021,0],[8311,9058,0],[2106,2679,0],[7767,15806,0],[6222,17336,0],[14230,1691,0]],0,0,1],
 			["Parato",[11369,5348,0],0,0],
