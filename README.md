@@ -1,4 +1,6 @@
-For Epoch 1.0.7
+Dowload the Epoch 1.0.7 version here: **[>> Download <<](https://github.com/AirwavesMan/ESSV3/archive/refs/tags/Epoch_1.0.7.zip)**
+
+For Epoch 1.0.7.1+
 
 Provides extra spawn options for DayZ Epoch and vanilla DayZ Mod:
 * Choose air or ground spawn

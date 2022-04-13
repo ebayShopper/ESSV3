@@ -144,7 +144,7 @@ if (class_selection && !_isPZombie) then {
 		[_bweps,3,_bag] call class_fillItems;
 	};
 	
-	if (_onBack != "") then {dayz_onBack = _onBack;};
+	if (_onBack != "") then {dayz_onBack = _onBack;player setVariable ["dayz_onBack",dayz_onBack,true];};
 	
 	_main = primaryWeapon player;
 	if (_main == "") then {
