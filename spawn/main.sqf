@@ -166,11 +166,12 @@ if (class_selection && !_isPZombie) then {
 		case (count class_choice > 0): {class_choice select 8}; //Custom loadout by UID
 		default {0};
 	};
-
-	_wealth = player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
-	if (_wealth < _coins) then {
-		player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_wealth + _coins),true];
-	};
+	if (Z_SingleCurrency) then {
+		_wealth = player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
+		if (_wealth < _coins) then {
+			player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_wealth + _coins),true];
+		};
+	};	
 };
 
 if (spawn_selection) then {
