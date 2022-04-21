@@ -4,6 +4,7 @@
 	For detailed information about these variables see:
 	https://github.com/ebayShopper/ESSV3/blob/master/DOCUMENTATION.md
 */
+class_epoch = isClass (configFile >> "CfgWeapons" >> "Chainsaw");
 class_level1 = ["0","0","0"];
 class_level2 = ["0","0","0"];
 class_level3 = ["0","0","0"];
@@ -13,11 +14,11 @@ class_levelCount = 3; //If you add more class levels then increase this number.
 // class_level2 = class_level2 + class_level3;
 
 #define VIP_ITEMS "HandRoadFlare","ItemBandage",2,"ItemPainkiller","ItemWaterbottle","FoodPistachio","ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemMorphine" // constant example, these can be removed if they are not used below
-#define VIP_TOOLS "Binocular_Vector","NVGoggles","ItemCompass","ItemKnife","Itemmatchbox","Itemetool","ItemFlashlightRed","ItemWatch","ItemGPS"
+#define VIP_TOOLS "Binocular_Vector","NVGoggles","ItemCompass","ItemKnife","ItemMatchbox","Itemetool","ItemFlashlightRed","ItemWatch","ItemGPS"
 class_private = [ // These are only visible to players in their respective class levels
-	["VIP Scout","Camo1_DZ","SurvivorW2_DZ",["30Rnd_556x45_Stanag",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["M16A4_ACOG_DZ","M9_SD_DZ","Binocular_Vector"],"DZ_ALICE_Pack_EP1",[],[],1,0,0,"MeleeHatchet"],
-	["VIP Specialist","Rocket_DZ","SurvivorW2_DZ",["100Rnd_762x51_M240",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["Mk48_CCO_DZ","M9_SD_DZ","Binocular_Vector"],"DZ_British_ACU",[],[],2,0,0,"MeleeHatchet"],
-	["VIP Sniper","Sniper1_DZ","SurvivorW2_DZ",["20Rnd_762x51_DMR",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["DMR_DZ","M9_SD_DZ","Binocular_Vector"],"DZ_Backpack_EP1",[],[],3,0,0,"MeleeHatchet"]
+	["VIP Scout","Camo1_DZ","SurvivorW2_DZ",["30Rnd_556x45_Stanag",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["M16A4_ACOG_DZ","M9_SD_DZ","Binocular_Vector"],if (class_epoch) then {"ALICE_Pack_DZE1"} else {"DZ_ALICE_Pack_EP1"},[],[],1,0,0,"MeleeHatchet"],
+	["VIP Specialist","Rocket_DZ","SurvivorW2_DZ",["100Rnd_762x51_M240",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["Mk48_CCO_DZ","M9_SD_DZ","Binocular_Vector"],if (class_epoch) then {"British_ACU_DZE1"} else {"DZ_British_ACU"},[],[],2,0,0,"MeleeHatchet"],
+	["VIP Sniper","Sniper1_DZ","SurvivorW2_DZ",["20Rnd_762x51_DMR",2,"15Rnd_9x19_M9SD",3,VIP_ITEMS],["DMR_DZ","M9_SD_DZ","Binocular_Vector"],if (class_epoch) then {"CoyoteBackpack_DZE1"} else {"DZ_Backpack_EP1"},[],[],3,0,0,"MeleeHatchet"]
 ];
 class_customLoadout = [
 	"12345678900000000", // ebay

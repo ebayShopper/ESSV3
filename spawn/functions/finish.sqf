@@ -1,7 +1,11 @@
 if (player distance respawn_west_original < 100) then {
 	// Ground spawn
 	player setPosATL _grid;
-	if (surfaceIsWater respawn_west_original) then {player call fn_exitSwim;};
+	if (surfaceIsWater respawn_west_original) then {
+		player allowDamage false;
+		player call fn_exitSwim;
+		player allowDamage true;
+	};
 	
 	// Show infoText if not in HALO spawn
 	_nearestCity = nearestLocations [_grid, ["NameCityCapital","NameCity","NameVillage","NameLocal"],1000];
